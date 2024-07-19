@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#Todo{
+    margin: 10%;
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 300px;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 5px 6px 5px 5px rgb(79, 79, 79);
+}
+
+.formu{
+    margin: 50px;
+    padding: 30px;
+}
+
+.prim{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}
+.secu{display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}
+.terc{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}
+.cuart{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}

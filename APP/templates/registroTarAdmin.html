@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro T</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/stilo.css')}}">
+</head>
+<body>
+    <main>
+        <section id="Todo">
+            <form action="/Registro-Tareas-admin" method="POST" class="formu">
+                <div class="prim">
+                    <label for="">Nombre de la tarea</label>
+                    <input type="text" name="nombre_t">
+                </div>
+                <div class="secu">
+                    <label for="">Fecha Inicio</label>
+                    <input type="date" name="fecha_inicio_t">
+                </div>
+                <div class="terc">
+                    <label for="">Fecha Final</label>
+                    <input type="date" name="fecha_final_t">
+                </div>
+                <div class="cuart">
+                    <label for="">Estado</label>
+                    <select name="estado" id="">
+                        <option value="Por asignar">Por asignar</option>
+                        <option value="Terminado">Terminado</option>
+                        <option value="En proceso">En proceso</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/bootstrap.css')}}">
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Este es el resultado de tu busqueda "{{busquedaU}}"</h1>
+
+    <div class="row">
+        {% for UsuariosU in UsuariosU %}
+    
+        <div class="col-md-3 mb-3">
+            <div class="card"> 
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title ,b-0">Codigo de la tarea</h5>
+                    <p><strong>{{UsuariosU['id_u']}}</strong></p>
+                </div>
+                <div class="card-body">
+                    <p class="card-tex">Nombre del usuario</p>
+                    <p class="card-tex"><strong>{{UsuariosU['nombre_u']}}</strong></p>
+                    <p class="card-tex">Apellido del usuario</p>
+                    <p class="card-tex"><strong>{{UsuariosU['apellido_u']}}</strong></p>
+                    <p class="card-tex">Email del usuario</p>
+                    <p class="card-tex"><strong>{{UsuariosU['email_u']}}</strong></p>
+                    <p class="card-tex">Usuario</p>
+                    <p class="card-tex"><strong>{{UsuariosU['usuario_u']}}</strong></p>
+                    <p class="card-tex">Rol del usuario</p>
+                    <p class="card-tex"><strong>{{UsuariosU['rol_u']}}</strong></p>
+                </div>
+                <div>
+                    <a href="{{ url_for('eliminar_usu', id= UsuariosU.id_u)}}" class="btn btn-danger">Eliminar</a>
+                    <a href="{{ url_for('actu_usuario', id= UsuariosU.id_u)}}" class="btn btn-primary" id="btnActulizar">Actualizar</a>
+                </div>
+            </div>
+        </div>
+    
+        {% endfor %}
+    </div>
+</body>
+</html>

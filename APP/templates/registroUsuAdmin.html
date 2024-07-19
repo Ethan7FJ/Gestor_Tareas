@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <section class="w-96 bg-teal-500 h-auto m-12 mx-auto rounded-t-lg rounded-b-lg">
+            <h1 class="text-center text-xl p-1">
+                Registro de Usuario
+            </h1>
+            <form action="/Registro-Usuario-admin" method="POST" class="w-auto p-5">
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Nombre</label>
+                    <input name="nombre_u" type="text" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Apellido</label>
+                    <input name="apellido_u" type="text" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Email</label>
+                    <input name="email_u" type="email" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class="text-lg">Usuario</label>
+                    <input name="usuario_u" type="text" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Contraseña</label>
+                    <input name="contrasena_u" type="password" class="rounded-lg shadow-md shadow-teal-300 text-center" required placeholder="contrasena_u">
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Rol</label>
+                    <select name="rol_u" id="" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                        <option value="Admin">Administrador</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <input type="submit" value="Registrar" class="shadow-md shadow-teal-300 text-xl border-dotted rounded-lg bg-teal-300 p-2 cursor-pointer">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

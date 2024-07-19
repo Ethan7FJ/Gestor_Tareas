@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <section class="w-96 bg-teal-500 h-auto m-12 mx-auto rounded-t-lg rounded-b-lg">
+            <p class="text-center text-xl p-1">
+                Inicio de sesion
+            </p>
+            <form action="#" class="w-auto p-5" method="POST">
+                <div class="p-5 flex flex-col">
+                    <label for="" class="text-lg">Usuario</label>
+                    <input name="usuario_u" type="text" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <label for="" class=" text-lg">Contraseña</label>
+                    <input name="contrasena_u" type="password" class="rounded-lg shadow-md shadow-teal-300 text-center" required>
+                </div>
+                <div class="p-5 flex flex-col">
+                    <input type="submit" value="ingresar" class="shadow-md shadow-teal-300 text-xl border-dotted rounded-lg bg-teal-300 p-2 cursor-pointer">
+                </div>
+                <div>
+                    <a href="{{ url_for('recuperar_contrasena')}}">¿Se te olvido la contraseña?</a>
+                </div>
+                <div>
+                    <a href="/Registro-Usuario">Registrarse</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

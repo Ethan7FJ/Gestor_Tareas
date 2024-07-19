@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bootstrap.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Actualizar Contraseña</h2>
+        <p>Ingrese su Contraseña nueva</p>
+        <form method="POST" action="/restablecer_contrasena/{{ token }}">
+            <div class="form-group">
+                <label for="passw">Ingrese su contraseña nueva</label>
+                <input type="password" placeholder="contraseña" id="passw" name="passw" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="confir_passw">Confirme su contraseña nueva</label>
+                <input type="password" placeholder="contraseña" id="confir_passw" name="confir_passw" required class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Restablecer Contraseña</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Expirado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bootstrap.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>El token ha expirado</h2>
+        <p>El enlace de restablecimiento de contraseña ha expirado. Por favor, solicite un nuevo enlace.</p>
+        <a href="{{ url_for('recuperar_contrasena') }}" class="btn btn-primary">Solicitar nuevo enlace</a>
+    </div>
+</body>
+</html>

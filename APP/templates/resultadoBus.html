@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/bootstrap.css')}}">
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    
+<h1>Este es el resultado de tu busqueda "{{busqueda}}"</h1>
+
+<div class="row">
+    {% for tareas in tareas %}
+
+    <div class="col-md-3 mb-3">
+        <div class="card"> 
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title ,b-0">Codigo de la tarea</h5>
+                <p><strong>{{tareas['id_t']}}</strong></p>
+            </div>
+            <div class="card-body">
+                <p class="card-tex">Nombre de la tarea</p>
+                <p class="card-tex"><strong>{{tareas['nombre_t']}}</strong></p>
+                <p class="card-tex">Fecha de inicio</p>
+                <p class="card-tex"><strong>{{tareas['fecha_inicio_t']}}</strong></p>
+                <p class="card-tex">Fecha de finalizacion</p>
+                <p class="card-tex"><strong>{{tareas['fecha_final_t']}}</strong></p>
+                <p class="card-tex">Estado de la tarea</p>
+                <p class="card-tex"><strong>{{tareas['estado']}}</strong></p>
+            </div>
+            <div>
+                <a href="{{ url_for('eliminar_tare', id= tareas.id_t)}}" class="btn btn-danger">Eliminar</a>
+                <a href="{{ url_for('actu_tareas', id= tareas.id_t)}}" class="btn btn-primary" id="btnActulizar">Actualizar</a>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+</body>
+</html>
